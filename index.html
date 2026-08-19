@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arman — click here</title>
+  <meta name="description" content="Arman — software engineer, soccer player, traveler, reader." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --fg: #ececec;
+      --muted: #8a8a8a;
+      --accent: #f5f5f5;
+      --border: #2a2a2a;
+      --border-hover: #6a6a6a;
+      --max: 640px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: inherit; }
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 72px 24px 120px;
+    }
+
+    header {
+      margin-bottom: 48px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin: 0 0 12px;
+    }
+
+    .intro {
+      font-size: 16px;
+      color: var(--muted);
+      margin: 0;
+      min-height: 1.7em;
+    }
+
+    .caret {
+      display: inline-block;
+      width: 0.55ch;
+      background: var(--fg);
+      margin-left: 2px;
+      animation: blink 1s steps(1) infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    section {
+      margin-top: 56px;
+    }
+
+    h2 {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+
+    p { margin: 0 0 12px; }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .books li {
+      padding: 6px 0;
+    }
+
+    .books li::before {
+      content: "› ";
+      color: var(--muted);
+    }
+
+    .rec {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    .rec a {
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-color: var(--border-hover);
+      text-underline-offset: 3px;
+    }
+
+    .links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .links a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .links a:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-1px);
+    }
+
+    .links .arrow {
+      color: var(--muted);
+      transition: transform 0.15s ease, color 0.15s ease;
+    }
+
+    .links a:hover .arrow {
+      color: var(--fg);
+      transform: translateX(3px);
+    }
+
+    footer {
+      margin-top: 72px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+      main { padding: 48px 20px 80px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Arman</h1>
+      <p class="intro" id="intro"><span id="typed"></span><span class="caret">&nbsp;</span></p>
+    </header>
+
+    <section>
+      <h2>Work</h2>
+      <p>Software engineer at an investment bank. I build cool things — mostly at the intersection of finance, data, and useful tools.</p>
+    </section>
+
+    <section>
+      <h2>Soccer</h2>
+      <p>Played UPSL for a team in New York and NIRSA at university. US Soccer licensed grass-roots coach.</p>
+    </section>
+
+    <section>
+      <h2>Travel</h2>
+      <p>Loves to travel — 8 countries and counting.</p>
+    </section>
+
+    <section>
+      <h2>Books</h2>
+      <ul class="books">
+        <li>Outliers</li>
+        <li>Zero to One</li>
+        <li>Free to Choose</li>
+      </ul>
+      <p class="rec">Read something great? <a href="mailto:emran.khan101010@gmail.com?subject=Book%20rec">Send me a recommendation.</a></p>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/" target="_blank" rel="noopener">
+          <span>LinkedIn</span><span class="arrow">→</span>
+        </a>
+        <a href="mailto:emran.khan101010@gmail.com">
+          <span>Email</span><span class="arrow">→</span>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <span>Instagram</span><span class="arrow">→</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener">
+          <span>Custom link</span><span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Arman
+    </footer>
+  </main>
+
+  <script>
+    (function () {
+      const phrases = ['I build cool things.'];
+      const target = document.getElementById('typed');
+      const text = phrases[0];
+      let i = 0;
+
+      function type() {
+        if (i <= text.length) {
+          target.textContent = text.slice(0, i);
+          i++;
+          setTimeout(type, 55);
+        }
+      }
+
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        type();
+      } else {
+        target.textContent = text;
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
