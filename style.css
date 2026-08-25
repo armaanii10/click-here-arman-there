@@ -84,25 +84,29 @@ a { color: inherit; }
 }
 .panel > .content { position: relative; z-index: 2; }
 
-/* Video-bg panels (soccer, travel): text centered on top of the video */
+/* Video-bg panels (soccer, travel, work): text centered on top of the video */
 .panel--soccer .content,
-.panel--travel .content {
+.panel--travel .content,
+.panel--work .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 .panel--soccer h2,
-.panel--travel h2 {
+.panel--travel h2,
+.panel--work h2 {
   display: block;
   text-align: center;
   margin-left: 0;
   margin-right: 0;
 }
 .panel--soccer h2 .tick,
-.panel--travel h2 .tick { display: none; }
+.panel--travel h2 .tick,
+.panel--work h2 .tick { display: none; }
 .panel--soccer p,
-.panel--travel p {
+.panel--travel p,
+.panel--work p {
   max-width: 52ch;
   margin-left: auto;
   margin-right: auto;
@@ -134,8 +138,7 @@ a { color: inherit; }
  * The gradient overlay keeps type legible over any photo.
  */
 .panel--intro,
-.panel--books,
-.panel--work {
+.panel--books {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -154,11 +157,7 @@ a { color: inherit; }
     linear-gradient(rgba(18, 16, 12, 0.75), rgba(18, 16, 12, 0.88)),
     url('images/books.jpg');
 }
-.panel--work {
-  background-image:
-    linear-gradient(rgba(15, 15, 16, 0.80), rgba(15, 15, 16, 0.90)),
-    url('images/leadership.jpeg');
-}
+/* work bg replaced by <video class="panel-bg-video"> (leadership.jpeg is its poster) */
 
 /* Inline video clips (soccer, travel) */
 .video-row {
