@@ -134,6 +134,7 @@ a { color: inherit; }
  * The gradient overlay keeps type legible over any photo.
  */
 .panel--intro,
+.panel--books,
 .panel--work {
   background-size: cover;
   background-position: center;
@@ -148,6 +149,11 @@ a { color: inherit; }
 }
 /* soccer bg replaced by <video class="panel-bg-video"> */
 /* travel bg replaced by <video class="panel-bg-video"> (japan.jpg is its poster) */
+.panel--books {
+  background-image:
+    linear-gradient(rgba(18, 16, 12, 0.75), rgba(18, 16, 12, 0.88)),
+    url('images/books.jpg');
+}
 .panel--work {
   background-image:
     linear-gradient(rgba(15, 15, 16, 0.80), rgba(15, 15, 16, 0.90)),
