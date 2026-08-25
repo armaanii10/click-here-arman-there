@@ -8,235 +8,81 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #0f0f10;
-      --fg: #ececec;
-      --muted: #8a8a8a;
-      --accent: #f5f5f5;
-      --border: #2a2a2a;
-      --border-hover: #6a6a6a;
-      --max: 640px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-size: 15px;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    a { color: inherit; }
-
-    main {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 72px 24px 120px;
-    }
-
-    header {
-      margin-bottom: 48px;
-    }
-
-    h1 {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin: 0 0 12px;
-    }
-
-    .intro {
-      font-size: 16px;
-      color: var(--muted);
-      margin: 0;
-      min-height: 1.7em;
-    }
-
-    .caret {
-      display: inline-block;
-      width: 0.55ch;
-      background: var(--fg);
-      margin-left: 2px;
-      animation: blink 1s steps(1) infinite;
-    }
-
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-
-    section {
-      margin-top: 56px;
-    }
-
-    h2 {
-      font-size: 12px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--muted);
-      margin: 0 0 16px;
-    }
-
-    p { margin: 0 0 12px; }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .books li {
-      padding: 6px 0;
-    }
-
-    .books li::before {
-      content: "› ";
-      color: var(--muted);
-    }
-
-    .rec {
-      color: var(--muted);
-      font-size: 14px;
-      margin-top: 12px;
-    }
-
-    .rec a {
-      color: var(--fg);
-      text-decoration: underline;
-      text-decoration-color: var(--border-hover);
-      text-underline-offset: 3px;
-    }
-
-    .links {
-      display: grid;
-      gap: 10px;
-    }
-
-    .links a {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 18px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      text-decoration: none;
-      transition: border-color 0.15s ease, transform 0.15s ease;
-    }
-
-    .links a:hover {
-      border-color: var(--border-hover);
-      transform: translateY(-1px);
-    }
-
-    .links .arrow {
-      color: var(--muted);
-      transition: transform 0.15s ease, color 0.15s ease;
-    }
-
-    .links a:hover .arrow {
-      color: var(--fg);
-      transform: translateX(3px);
-    }
-
-    footer {
-      margin-top: 72px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    @media (max-width: 480px) {
-      main { padding: 48px 20px 80px; }
-      h1 { font-size: 24px; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
-    <header>
-      <h1>Arman</h1>
-      <p class="intro" id="intro"><span id="typed"></span><span class="caret">&nbsp;</span></p>
-    </header>
+  <nav class="dot-nav" aria-label="Section navigation">
+    <a href="#intro" data-label="intro"></a>
+    <a href="#soccer" data-label="soccer"></a>
+    <a href="#travel" data-label="travel"></a>
+    <a href="#books" data-label="books"></a>
+    <a href="#work" data-label="work"></a>
+    <a href="#contact" data-label="contact"></a>
+  </nav>
 
-    <section>
-      <h2>Soccer</h2>
-      <p>Soccer's been a constant in my life for as long as I can remember. I played UPSL for a team in New York and NIRSA back in university, and these days I coach as a US Soccer licensed grassroots coach, passing on what I've learned to a new generation of players.</p>
-      <p class="rec">Catch my soccer highlights over on <a href="https://www.youtube.com/@armank10_" target="_blank" rel="noopener">YouTube ↗</a>.</p>
-    </section>
-
-    <section>
-      <h2>Travel</h2>
-      <p>I try to see as much of the world as I can. Eight countries and counting, with plenty more still on the list.</p>
-    </section>
-
-    <section>
-      <h2>Books</h2>
-      <p>Some books that have shaped how I think:</p>
-      <ul class="books">
-        <li>Outliers</li>
-        <li>Zero to One</li>
-        <li>Free to Choose</li>
-      </ul>
-      <p class="rec">Read something great lately? I'd love to hear about it. <a href="mailto:armankhan101022@gmail.com?subject=Book%20rec">Send me a recommendation.</a></p>
-    </section>
-
-    <section>
-      <h2>Work</h2>
-      <p>When I'm not on a field or planning my next trip, I'm a software engineer at an investment bank, working at the intersection of finance, data, and building things people actually use.</p>
-    </section>
-
-    <section>
-      <h2>Links</h2>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/arman-khan-1899201a9/" target="_blank" rel="noopener">
-          <span>LinkedIn</span><span class="arrow">→</span>
-        </a>
-        <a href="mailto:armankhan101022@gmail.com">
-          <span>Email</span><span class="arrow">→</span>
-        </a>
-        <a href="https://www.instagram.com/armaank10__?igsi=bGt3ZHhzcDZocDFj&utm_source=qr/" target="_blank" rel="noopener">
-          <span>Instagram</span><span class="arrow">→</span>
-        </a>
-        <a href="#" target="_blank" rel="noopener">
-          <span>Custom link</span><span class="arrow">→</span>
-        </a>
+  <main class="scroll-container">
+    <section class="panel panel--intro" id="intro">
+      <div class="content">
+        <h1>Arman</h1>
+        <p class="intro"><span id="typed"></span><span class="caret">&nbsp;</span></p>
+        <p class="scroll-hint" aria-hidden="true">scroll ↓</p>
       </div>
     </section>
 
-    <footer>
-      © <span id="year"></span> Arman
-    </footer>
+    <section class="panel panel--soccer" id="soccer">
+      <div class="content">
+        <h2><span class="tick"></span>Soccer</h2>
+        <p>Soccer's been a constant in my life for as long as I can remember. I played UPSL for a team in New York and NIRSA back in university, and these days I coach as a US Soccer licensed grassroots coach, passing on what I've learned to a new generation of players.</p>
+        <p class="rec">Catch my soccer highlights over on <a href="https://www.youtube.com/@armank10_" target="_blank" rel="noopener">YouTube ↗</a>.</p>
+      </div>
+    </section>
+
+    <section class="panel panel--travel" id="travel">
+      <div class="content">
+        <h2><span class="tick"></span>Travel</h2>
+        <p>I try to see as much of the world as I can. Eight countries and counting, with plenty more still on the list.</p>
+      </div>
+    </section>
+
+    <section class="panel panel--books" id="books">
+      <div class="content">
+        <h2><span class="tick"></span>Books</h2>
+        <p>Some books that have shaped how I think:</p>
+        <ul class="books">
+          <li>Outliers</li>
+          <li>Zero to One</li>
+          <li>Free to Choose</li>
+        </ul>
+        <p class="rec">Read something great lately? I'd love to hear about it. <a href="mailto:armankhan101022@gmail.com?subject=Book%20rec">Send me a recommendation.</a></p>
+      </div>
+    </section>
+
+    <section class="panel panel--work" id="work">
+      <div class="content">
+        <h2><span class="tick"></span>Work</h2>
+        <p>When I'm not on a field or planning my next trip, I'm a software engineer at an investment bank, working at the intersection of finance, data, and building things people actually use.</p>
+      </div>
+    </section>
+
+    <section class="panel panel--contact" id="contact">
+      <div class="content">
+        <h2><span class="tick"></span>Elsewhere</h2>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/arman-khan-1899201a9/" target="_blank" rel="noopener">
+            <span>LinkedIn</span><span class="arrow">→</span>
+          </a>
+          <a href="mailto:armankhan101022@gmail.com">
+            <span>Email</span><span class="arrow">→</span>
+          </a>
+          <a href="https://www.instagram.com/armaank10__?igsi=bGt3ZHhzcDZocDFj&utm_source=qr/" target="_blank" rel="noopener">
+            <span>Instagram</span><span class="arrow">→</span>
+          </a>
+        </div>
+        <p class="footer">© <span id="year"></span> Arman</p>
+      </div>
+    </section>
   </main>
 
-  <script>
-    (function () {
-      const phrases = ["Hey, I'm Arman. Welcome to my corner of the internet."];
-      const target = document.getElementById('typed');
-      const text = phrases[0];
-      let i = 0;
-
-      function type() {
-        if (i <= text.length) {
-          target.textContent = text.slice(0, i);
-          i++;
-          setTimeout(type, 55);
-        }
-      }
-
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        type();
-      } else {
-        target.textContent = text;
-      }
-
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
