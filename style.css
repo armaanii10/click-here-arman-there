@@ -59,7 +59,26 @@ a { color: inherit; }
   align-items: center;
   padding: 8vh 8vw;
   transition: background-color 0.6s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+.panel-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.panel-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(13, 18, 16, 0.45), rgba(13, 18, 16, 0.65));
+  z-index: 1;
+  pointer-events: none;
+}
+.panel > .content { position: relative; z-index: 2; }
 
 .panel .content {
   width: 100%;
@@ -87,7 +106,6 @@ a { color: inherit; }
  * The gradient overlay keeps type legible over any photo.
  */
 .panel--intro,
-.panel--soccer,
 .panel--travel,
 .panel--work {
   background-size: cover;
@@ -101,11 +119,7 @@ a { color: inherit; }
     url('images/arman-portrait.jpeg');
   background-position: center 20%;
 }
-.panel--soccer {
-  background-image:
-    linear-gradient(rgba(13, 18, 16, 0.78), rgba(13, 18, 16, 0.88)),
-    url('images/building-communities.jpeg');
-}
+/* soccer bg replaced by <video class="panel-bg-video"> */
 .panel--travel {
   background-image:
     linear-gradient(rgba(12, 16, 19, 0.75), rgba(12, 16, 19, 0.88)),
