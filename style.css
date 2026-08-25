@@ -80,6 +80,42 @@ a { color: inherit; }
 .panel--work    { background: var(--bg-work); }
 .panel--contact { background: var(--bg-contact); }
 
+/*
+ * Full-bleed section imagery.
+ * Drop matching files into /images and they take over the panel bg;
+ * missing files fall back to the solid color above without breaking layout.
+ * The gradient overlay keeps type legible over any photo.
+ */
+.panel--intro,
+.panel--soccer,
+.panel--travel,
+.panel--books {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.panel--intro {
+  background-image:
+    linear-gradient(rgba(11, 11, 13, 0.55), rgba(11, 11, 13, 0.75)),
+    url('images/intro.jpg');
+}
+.panel--soccer {
+  background-image:
+    linear-gradient(rgba(13, 18, 16, 0.68), rgba(13, 18, 16, 0.82)),
+    url('images/soccer.jpg');
+}
+.panel--travel {
+  background-image:
+    linear-gradient(rgba(12, 16, 19, 0.68), rgba(12, 16, 19, 0.82)),
+    url('images/travel.jpg');
+}
+.panel--books {
+  background-image:
+    linear-gradient(rgba(18, 16, 12, 0.72), rgba(18, 16, 12, 0.85)),
+    url('images/books.jpg');
+}
+
 /* Intro */
 h1 {
   font-size: 44px;
